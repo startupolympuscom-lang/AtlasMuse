@@ -1,0 +1,6 @@
+{
+  "name": "Atlas Muse Crafts",
+  "description": "Moroccan-inspired furniture, meaningful objects and handcrafted artisan collections for modern living.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
