@@ -15,13 +15,28 @@ const staticDir = fs.existsSync(distDir) && fs.existsSync(path.join(distDir, 'in
   ? distDir
   : __dirname;
 
-// Serve static assets
-app.use(express.static(staticDir));
+// Serve static assets with index.html enabled
+app.use(express.static(staticDir, { index: 'index.html' }));
 
-// Fallback for HTML5 client-side routes (e.g. /products/:id or other subpaths)
-app.use((req, res) => {
-  const indexPath = path.join(staticDir, 'index.html');
-  res.sendFile(indexPath);
+// Route handler to support clean paths without trailing slashes
+app.get('*', (req, res) => {
+  const cleanPath = req.path.replace(/\/+$/, '');
+  
+  // 1. Check if a directory with index.html exists for this path
+  if (cleanPath) {
+    const directIndexPath = path.join(staticDir, cleanPath, 'index.html');
+    if (fs.existsSync(directIndexPath)) {
+      return res.sendFile(directIndexPath);
+    }
+  }
+
+  // 2. Fallback to main index.html for client-side routing
+  const rootIndex = path.join(staticDir, 'index.html');
+  if (fs.existsSync(rootIndex)) {
+    return res.sendFile(rootIndex);
+  }
+
+  res.status(404).send('Not found');
 });
 
 app.listen(PORT, '0.0.0.0', () => {

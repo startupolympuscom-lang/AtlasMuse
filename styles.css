@@ -57,3 +57,47 @@ footer{border-top:5px solid var(--wine)}
 .collection-page .catalog-controls{grid-template-columns:minmax(0,1fr) minmax(180px,.45fr);}
 .collection-page .catalog-controls label:first-child{grid-column:auto;}
 @media(max-width:560px){.collection-options{gap:8px;}.collection-choice{padding:10px 12px;gap:9px;}.collection-page .catalog-controls{grid-template-columns:1fr;}.collection-choices{margin-bottom:24px;}}
+
+/* Store Policies Page Styling */
+.policy-page{padding-top:0;max-width:1400px;margin:0 auto}
+.policy-meta-bar{display:flex;flex-wrap:wrap;gap:20px;font-size:13px;color:#706760;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:35px}
+.policy-summary-card{background:#eae2d8;border-top:4px solid var(--wine);padding:32px 36px;margin-bottom:45px}
+.policy-summary-card h2{font-size:26px;color:var(--wine);margin-bottom:12px;letter-spacing:-.02em}
+.policy-summary-card p.summary-intro{font-size:14px;color:#615852;margin-bottom:20px;max-width:800px}
+.policy-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px 28px}
+.policy-summary-item{font-size:14px;line-height:1.6;color:var(--ink);border-left:3px solid var(--clay);padding-left:14px}
+.policy-summary-item strong{display:block;color:var(--wine);font-size:14px;margin-bottom:4px}
+.policy-layout{display:grid;grid-template-columns:290px 1fr;gap:55px;align-items:start}
+.policy-toc{position:sticky;top:25px;background:#fffaf5;border:1px solid var(--line);padding:24px;max-height:calc(100vh - 50px);overflow-y:auto}
+.policy-toc h3{font-size:14px;letter-spacing:.09em;text-transform:uppercase;color:var(--wine);margin-bottom:14px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.policy-toc-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px}
+.policy-toc-link{font-size:13px;color:#68605b;display:block;padding:6px 8px;border-radius:2px;line-height:1.4;transition:color .2s,background .2s}
+.policy-toc-link:hover,.policy-toc-link:focus-visible{color:var(--wine);background:var(--peach)}
+.policy-content{min-width:0}
+.policy-section{border-bottom:1px solid var(--line);padding-bottom:45px;margin-bottom:45px;scroll-margin-top:30px}
+.policy-section:last-of-type{border-bottom:0;margin-bottom:0}
+.policy-section-num{font-size:12px;letter-spacing:.15em;color:var(--wine);display:block;margin-bottom:8px;font-weight:600}
+.policy-section h2{font-size:clamp(25px,2.6vw,36px);color:var(--wine);margin-bottom:20px;letter-spacing:-.03em}
+.policy-section h3{font-size:18px;color:var(--wine);margin:26px 0 10px;letter-spacing:-.015em}
+.policy-section p{font-size:15px;line-height:1.75;color:#3b3532;margin-bottom:16px;max-width:820px}
+.policy-section ul,.policy-section ol{margin:12px 0 20px 24px;padding:0;max-width:820px}
+.policy-section li{font-size:15px;line-height:1.75;color:#3b3532;margin-bottom:8px}
+.policy-table-wrapper{overflow-x:auto;margin:22px 0 28px;border:1px solid var(--line);background:#fffaf5;max-width:820px}
+.policy-table{width:100%;border-collapse:collapse;text-align:left;font-size:14px}
+.policy-table th,.policy-table td{padding:14px 18px;border-bottom:1px solid var(--line)}
+.policy-table th{background:#f0e7dc;color:var(--wine);font-weight:600;letter-spacing:.02em}
+.policy-table tr:last-child td{border-bottom:0}
+.policy-contact-card{background:var(--peach);padding:30px;color:var(--wine);margin:25px 0;max-width:820px;border-left:4px solid var(--wine)}
+.policy-contact-card h4{margin:0 0 12px;font-size:20px}
+.policy-contact-card p{color:var(--wine);margin-bottom:8px;font-size:15px}
+.policy-contact-card a{text-decoration:underline;font-weight:600;color:var(--wine)}
+.policy-back-to-top{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--wine);margin-top:20px;text-decoration:underline}
+/* Direct Shopify Integration Card */
+.shopify-checkout-card{background:#fffaf5;border:1px solid var(--line);border-top:4px solid var(--wine);padding:22px;margin-top:24px}
+.shopify-checkout-card .eyebrow{color:var(--wine);margin-bottom:8px;display:block}
+.shopify-checkout-card h3{font-size:18px;color:var(--wine);margin:0 0 10px;font-weight:500}
+.shopify-checkout-card p{font-size:13px;color:#615852;margin-bottom:16px;line-height:1.6}
+.shopify-btn{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:center;padding:15px 20px;background:var(--wine);color:var(--chalk)!important;font-size:13px;letter-spacing:.03em;transition:background .2s,transform .2s}
+.shopify-btn:hover{background:#51212b;transform:translateY(-2px)}
+@media(max-width:960px){.policy-layout{grid-template-columns:1fr;gap:30px}.policy-toc{position:static;max-height:none;margin-bottom:25px}}
+@media(max-width:600px){.policy-summary-card{padding:22px 18px}.policy-summary-grid{grid-template-columns:1fr;gap:16px}.policy-table th,.policy-table td{padding:10px 12px;font-size:13px}.policy-contact-card{padding:20px}}
