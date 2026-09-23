@@ -92,12 +92,52 @@ footer{border-top:5px solid var(--wine)}
 .policy-contact-card p{color:var(--wine);margin-bottom:8px;font-size:15px}
 .policy-contact-card a{text-decoration:underline;font-weight:600;color:var(--wine)}
 .policy-back-to-top{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--wine);margin-top:20px;text-decoration:underline}
-/* Direct Shopify Integration Card */
-.shopify-checkout-card{background:#fffaf5;border:1px solid var(--line);border-top:4px solid var(--wine);padding:22px;margin-top:24px}
-.shopify-checkout-card .eyebrow{color:var(--wine);margin-bottom:8px;display:block}
-.shopify-checkout-card h3{font-size:18px;color:var(--wine);margin:0 0 10px;font-weight:500}
-.shopify-checkout-card p{font-size:13px;color:#615852;margin-bottom:16px;line-height:1.6}
-.shopify-btn{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:center;padding:15px 20px;background:var(--wine);color:var(--chalk)!important;font-size:13px;letter-spacing:.03em;transition:background .2s,transform .2s}
-.shopify-btn:hover{background:#51212b;transform:translateY(-2px)}
+/* Bespoke Checkout & Payment Styles */
+.artisan-hallmark{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--wine);letter-spacing:.03em;margin:18px 0;padding:12px 16px;background:#f2e9de;border-left:3px solid var(--wine)}
+.payment-options-group{display:flex;flex-direction:column;gap:14px;margin-bottom:20px}
+.payment-option-card{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;border:1px solid #c9bdb2;background:#fffaf5;cursor:pointer;transition:border-color .2s,background .2s}
+.payment-option-card:hover{border-color:var(--wine);background:#f9f3ec}
+.payment-option-card.active{border-color:var(--wine);background:#f4ebe0;box-shadow:inset 0 0 0 1px var(--wine)}
+.payment-option-card input[type="radio"]{width:20px;height:20px;margin-top:2px;accent-color:var(--wine);cursor:pointer;flex-shrink:0}
+.payment-option-card-body{flex:1}
+.payment-option-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:4px}
+.payment-option-title-row strong{font-size:15px;color:var(--wine);font-weight:600}
+.payment-option-card p{font-size:13px;color:#6d635c;margin:0;line-height:1.5}
+.cod-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.05em;padding:3px 9px;background:var(--wine);color:var(--chalk);border-radius:2px}
+.stripe-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;padding:3px 8px;background:#2445a6;color:#ffffff;border-radius:2px}
+.payment-details-box{border:1px solid #c9bdb2;background:#fffaf5;padding:24px;margin-top:14px}
+.stripe-badge-bar{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--wine);letter-spacing:.03em;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.stripe-notice{font-size:12px;color:#786d65;margin-top:14px;line-height:1.5}
+.card-input-wrapper{position:relative}
+.card-icons{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:18px;pointer-events:none}
+.cod-banner{display:flex;align-items:center;gap:16px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.cod-icon{font-size:32px;line-height:1}
+.cod-banner h4{font-size:18px;color:var(--wine);margin:0 0 4px;font-weight:600}
+.cod-amount{font-size:14px;color:var(--ink);margin:0}
+.cod-amount strong{color:var(--wine);font-size:16px}
+.cod-mad{color:#554e48;font-weight:600;margin-left:6px}
+.cod-steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.cod-steps li{font-size:13px;line-height:1.6;color:#4f4843;border-left:2px solid var(--clay);padding-left:12px}
+.cod-steps li strong{color:var(--wine)}
+.morocco-only-note{font-size:12px;color:#756a62;margin-top:10px;font-style:italic}
+.order-confirmation{max-width:860px;margin:40px auto 80px;padding:45px 50px;background:#fffaf5;border:1px solid var(--line);border-top:5px solid var(--wine)}
+.confirmation-header{text-align:center;padding-bottom:30px;border-bottom:1px solid var(--line);margin-bottom:30px}
+.confirmation-header h1{font-size:clamp(32px,3.8vw,52px);color:var(--wine);margin:12px 0 16px}
+.confirmation-badge{display:inline-block;padding:6px 16px;background:var(--wine);color:var(--chalk);font-size:13px;letter-spacing:.05em;margin-top:12px;font-weight:500}
+.confirmation-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-bottom:35px}
+.confirmation-section h3{font-size:16px;letter-spacing:.05em;text-transform:uppercase;color:var(--wine);margin-bottom:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.confirmation-section p{font-size:14px;color:#453e3a;margin-bottom:6px;line-height:1.6}
+.confirmation-items{border-top:1px solid var(--line);padding-top:25px;margin-bottom:30px}
+.confirmation-items h3{font-size:18px;color:var(--wine);margin-bottom:18px}
+.confirmation-item{display:grid;grid-template-columns:60px 1fr auto;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid #ebe2d8}
+.confirmation-item img{width:60px;height:60px;object-fit:cover}
+.confirmation-item h4{font-size:15px;margin:0 0 4px;color:var(--wine)}
+.confirmation-item p{font-size:12px;color:#70665f;margin:0}
+.confirmation-total-row{display:flex;justify-content:space-between;font-size:18px;margin-top:20px;padding-top:15px;border-top:2px solid var(--wine);color:var(--wine);font-weight:600}
+.confirmation-next-steps{background:#f4ebe0;padding:22px 26px;margin-bottom:30px;border-left:4px solid var(--clay)}
+.confirmation-next-steps h4{font-size:16px;color:var(--wine);margin:0 0 10px}
+.confirmation-next-steps p{font-size:13px;line-height:1.6;color:#554c46;margin:0}
+.confirmation-actions{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+@media(max-width:700px){.order-confirmation{padding:25px 20px;margin:20px auto}.confirmation-grid{grid-template-columns:1fr;gap:20px}}
 @media(max-width:960px){.policy-layout{grid-template-columns:1fr;gap:30px}.policy-toc{position:static;max-height:none;margin-bottom:25px}}
 @media(max-width:600px){.policy-summary-card{padding:22px 18px}.policy-summary-grid{grid-template-columns:1fr;gap:16px}.policy-table th,.policy-table td{padding:10px 12px;font-size:13px}.policy-contact-card{padding:20px}}
