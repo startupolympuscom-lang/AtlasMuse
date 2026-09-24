@@ -18,6 +18,29 @@ const staticDir = fs.existsSync(distDir) && fs.existsSync(path.join(distDir, 'in
 // Serve static assets with index.html enabled
 app.use(express.static(staticDir, { index: 'index.html' }));
 
+// Explicit handlers for search engine crawlers
+app.get('/robots.txt', (req, res) => {
+  const robotsPath = fs.existsSync(path.join(staticDir, 'robots.txt'))
+    ? path.join(staticDir, 'robots.txt')
+    : path.join(__dirname, 'robots.txt');
+  if (fs.existsSync(robotsPath)) {
+    res.type('text/plain').sendFile(robotsPath);
+  } else {
+    res.status(404).send('Not found');
+  }
+});
+
+app.get('/sitemap.xml', (req, res) => {
+  const sitemapPath = fs.existsSync(path.join(staticDir, 'sitemap.xml'))
+    ? path.join(staticDir, 'sitemap.xml')
+    : path.join(__dirname, 'sitemap.xml');
+  if (fs.existsSync(sitemapPath)) {
+    res.type('application/xml').sendFile(sitemapPath);
+  } else {
+    res.status(404).send('Not found');
+  }
+});
+
 // Route handler to support clean paths without trailing slashes
 app.get('*', (req, res) => {
   const cleanPath = req.path.replace(/\/+$/, '');

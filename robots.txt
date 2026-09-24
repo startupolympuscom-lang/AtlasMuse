@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /cart/
+Disallow: /cart
+Disallow: /checkout/
+Disallow: /checkout
+
+# Sitemap index
+Sitemap: https://atlasmusecrafts.com/sitemap.xml
